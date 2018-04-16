@@ -24,6 +24,7 @@ USER user
 RUN unzip server.zip
 
 COPY ./etc/eula.txt eula.txt
+COPY ./etc/server.properties server.properties
 
 RUN chmod 0750 startserver.sh
 
