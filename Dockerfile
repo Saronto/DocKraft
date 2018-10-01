@@ -26,6 +26,9 @@ RUN unzip server.zip
 COPY ./etc/eula.txt eula.txt
 COPY ./etc/server.properties server.properties
 
+RUN chown user:groupUser eula.txt
+RUN chown user:groupUser server.properties
+
 RUN chmod 0750 startserver.sh
 
 EXPOSE 25565
