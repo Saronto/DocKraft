@@ -26,8 +26,16 @@ RUN unzip server.zip
 COPY ./etc/eula.txt eula.txt
 COPY ./etc/server.properties server.properties
 
+USER root
+
 RUN chown user:groupUser eula.txt
 RUN chown user:groupUser server.properties
+
+RUN chmod 0750 eula.txt
+RUN chmod 0750 server.properties
+RUN chmod 0750 startserver.sh
+
+USER user
 
 RUN chmod 0750 startserver.sh
 
