@@ -15,7 +15,7 @@ RUN useradd user --uid ${LOCAL_USER_ID} --gid groupUser --shell /bin/bash --crea
 
 WORKDIR /home/user
 
-RUN curl -o server.zip http://downloads.gtnewhorizons.com/ServerPacks/GTNewHorizonsServer-1.7.10-2.0.2.7.zip
+RUN curl -o server.zip http://downloads.gtnewhorizons.com/ServerPacks/GTNewHorizonsServer-1.7.10-2.0.5.1.zip
 
 RUN chown user:groupUser server.zip
 
